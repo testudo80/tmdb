@@ -2,6 +2,7 @@
   <div id="sidebar">
     <TheSidebar :name="brand.name" :logo="brand.logo" />
   </div>
+  <!--eslint-disable-next-line vue/no-multiple-template-root-->
   <div id="right-side-wrapper">
     <header>
       <TheHeader />
