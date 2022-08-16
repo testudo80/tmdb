@@ -1,15 +1,11 @@
 <template>
-
   <div>
     <StoredMovies :movies="storedMovies" />
   </div>
-  
 </template>
 
 <script>
 import StoredMovies from "../../components/movie-items/StoredMovies.vue";
-
-
 
 export default {
   components: {

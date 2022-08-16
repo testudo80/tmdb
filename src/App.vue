@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'
-import { getUsers } from './services/users'
-import TheHeader from "./components/layouts/TheHeader.vue";
-import TheSidebar from "./components/layouts/TheSidebar.vue";
-import TheFooter from "./components/layouts/TheFooter.vue";
-import logo from "./assets/brand/turtle-icon.png";
+import { onMounted, ref } from 'vue';
+import getUsers from "./services/users.js"
+import TheHeader from "./components/layouts/TheHeader.vue"
+import TheSidebar from "./components/layouts/TheSidebar.vue"
+import TheFooter from "./components/layouts/TheFooter.vue"
+import logo from "./assets/brand/turtle-icon.png"
 
 export default {
   components: {
