@@ -1,3 +1,4 @@
+export default {}
 import { api } from './api.js'
 
 export const getUsers = async () => {
