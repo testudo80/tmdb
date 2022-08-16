@@ -1,1 +1,5 @@
-
+<template>
+    <div>  
+        <h1>Sivua ei löydy</h1>
+    </div>
+</template>
