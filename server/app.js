@@ -9,5 +9,5 @@ app.get('/users', (req, res) => {
   res.status(200).json(users)
 })
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 5173
 app.listen(port, () => console.log(`listening port ${port}`))

@@ -21,14 +21,12 @@
 </template>
 
 <script>
+import { onMounted, ref } from 'vue'
+import { getUsers } from './services/users.ts'
 import TheHeader from "./components/layouts/TheHeader.vue";
 import TheSidebar from "./components/layouts/TheSidebar.vue";
 import TheFooter from "./components/layouts/TheFooter.vue";
-// kuvat, huoh...
 import logo from "./assets/brand/turtle-icon.png";
-
-import { onMounted, ref } from 'vue'
-import { getUsers } from './services/users.ts'
 
 export default {
   components: {
@@ -38,19 +36,15 @@ export default {
   },
   props: ["name", "long-name", "logo", "founded", "creator", "description"],
   data() {
-
     return {
-
       brand: {
         name: "TMDb X",
         longName: "Turtle's Movie Database",
         logo: logo,
         founded: 2022,
         creator: "@kilpikonna",
-        description:
-          "TMDb (Turtle's Movie Database) eli kilpikonnan elokuva tietokanta. Idea oman elokuva-aiheisen web-applikaation rakentamiseen syntyi yksinkertaisesta halusta lukea elokuvan juonesta tarkemmin ennen elokuvan katsomista, mutta kuitenkin niin ettei teksti paljasta juonesta liikaa. Jokaisesta tietokannan elokuvasta löytyy juoniseloste, jonka olen joko itse kirjoittanut tai olen muokannut alkuperäistä tekstiä.",
+        description: "TMDb (Turtle's Movie Database) eli kilpikonnan elokuva tietokanta. Idea oman elokuva-aiheisen web-applikaation rakentamiseen syntyi yksinkertaisesta halusta lukea elokuvan juonesta tarkemmin ennen elokuvan katsomista, mutta kuitenkin niin ettei teksti paljasta juonesta liikaa. Jokaisesta tietokannan elokuvasta löytyy juoniseloste, jonka olen joko itse kirjoittanut tai olen muokannut alkuperäistä tekstiä.",
       },
-
     }
     const usersList = ref([])
 
@@ -59,7 +53,6 @@ export default {
       usersList.value = users
     })
   },
-
 };
 </script>
 
