@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       brand: {
-        name: "TMDb X",
+        name: "TMDb",
         longName: "Turtle's Movie Database",
         logo: logo,
         founded: 2022,

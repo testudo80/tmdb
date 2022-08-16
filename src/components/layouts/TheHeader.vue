@@ -1,24 +1,27 @@
 <template>
-    <ul>
-        <li v-for="link in headerLinks" :key="link.id" class="header-link">
-            <span v-if="link.icon !== ''">
-                <router-link :to="link.url">
-                    {{ link.name }}
-                    <font-awesome-icon :icon="[link.icon, link.iconName]" />
-                </router-link>
-            </span>
-            <span v-else>
-                <router-link :to="link.url">
-                    {{ link.name }}
-                </router-link>
-            </span>
-        </li>
 
-        <li v-for="item in items" :key="item.id" @click="toggleFilter(item)" :class="{ active: item.off }"
-            class="filter">
-            <font-awesome-icon :icon="[item.icon, item.iconName]" /> {{ item.label }}
-        </li>
-    </ul>
+    <header>
+        <ul>
+            <li v-for="link in headerLinks" :key="link.id" class="header-link">
+                <span v-if="link.icon !== ''">
+                    <router-link :to="link.url">
+                        {{ link.name }}
+                        <font-awesome-icon :icon="[link.icon, link.iconName]" />
+                    </router-link>
+                </span>
+                <span v-else>
+                    <router-link :to="link.url">
+                        {{ link.name }}
+                    </router-link>
+                </span>
+            </li>
+
+            <li v-for="item in items" :key="item.id" @click="toggleFilter(item)" :class="{ active: item.off }"
+                class="filter">
+                <font-awesome-icon :icon="[item.icon, item.iconName]" /> {{ item.label }}
+            </li>
+        </ul>
+    </header>
 
     <!--
         <li class="search-movie">
@@ -95,7 +98,7 @@ export default {
                     title: 'Star Wars: Force Awakens',
                     year: 2016,
                     description: 'juoni kuvaus + muuta tietoa',
-                   
+
                     quality: ['atv', '4k'],
                     genre: 'Sci-fi'
                 },
@@ -104,7 +107,7 @@ export default {
                     title: 'Star Wars: The Last Jedi',
                     year: 2016,
                     description: 'juoni kuvaus + muuta tietoa',
-            
+
                     quality: ['atv', 'br', '4k'],
                     genre: 'Sci-fi'
                 },
@@ -113,7 +116,7 @@ export default {
                     title: 'Rogue One: A Star Wars Story',
                     year: 2016,
                     description: 'juoni kuvaus + muuta tietoa',
-                 
+
                     quality: ['br', '4k'],
                     genre: 'Sci-fi'
                 },

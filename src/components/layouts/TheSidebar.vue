@@ -61,7 +61,7 @@
             <li class="empty-list"></li>
         </ul>
     </nav>-->
-
+<div id="sidebar">
     <nav>
         <router-link to="/" id="title">
             <h1>{{ name }} <img :src="logo" alt="Logo"></h1>
@@ -77,6 +77,7 @@
             </li>
         </ul>
     </nav>
+    </div>
 
 </template>
 

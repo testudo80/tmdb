@@ -1,7 +1,9 @@
 <template>
+
   <div>
     <StoredMovies :movies="storedMovies" />
   </div>
+  
 </template>
 
 <script>
