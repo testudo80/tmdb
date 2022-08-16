@@ -46,12 +46,15 @@ export default {
         description: "TMDb (Turtle's Movie Database) eli kilpikonnan elokuva tietokanta. Idea oman elokuva-aiheisen web-applikaation rakentamiseen syntyi yksinkertaisesta halusta lukea elokuvan juonesta tarkemmin ennen elokuvan katsomista, mutta kuitenkin niin ettei teksti paljasta juonesta liikaa. Jokaisesta tietokannan elokuvasta löytyy juoniseloste, jonka olen joko itse kirjoittanut tai olen muokannut alkuperäistä tekstiä.",
       },
     }
+
+    
     const usersList = ref([])
 
     onMounted(async () => {
       const users = await getUsers()
       usersList.value = users
     })
+    
   },
 };
 </script>
