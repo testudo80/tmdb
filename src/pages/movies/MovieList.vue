@@ -7,6 +7,8 @@
 <script>
 import StoredMovies from "../../components/movie-items/StoredMovies.vue";
 
+
+
 export default {
   components: {
     StoredMovies,

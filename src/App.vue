@@ -7,17 +7,15 @@
       <TheHeader />
     </header>
     <div class="content-box">
-      <main><RouterView /><!-- <-SIVUJEN SISÄLTÖ (sisäänrakennettu komponentti)--></main>
+      <usersList />
+      <main>
+        <RouterView /><!-- <-SIVUJEN SISÄLTÖ (sisäänrakennettu komponentti)-->
+      </main>
       <section>
         <p>tähän tekstiä - section</p>
       </section>
-      <TheFooter
-        :name="brand.name"
-        :logo="brand.logo"
-        :founded="brand.founded"
-        :creator="brand.creator"
-        :description="brand.description"
-      />
+      <TheFooter :name="brand.name" :logo="brand.logo" :founded="brand.founded" :creator="brand.creator"
+        :description="brand.description" />
     </div>
   </div>
 </template>
@@ -26,19 +24,23 @@
 import TheHeader from "./components/layouts/TheHeader.vue";
 import TheSidebar from "./components/layouts/TheSidebar.vue";
 import TheFooter from "./components/layouts/TheFooter.vue";
-
 // kuvat, huoh...
 import logo from "./assets/brand/turtle-icon.png";
+
+import { onMounted, ref } from 'vue'
+import { getUsers } from './services/users.ts'
 
 export default {
   components: {
     TheHeader,
     TheSidebar,
-    TheFooter,
+    TheFooter
   },
   props: ["name", "long-name", "logo", "founded", "creator", "description"],
   data() {
+
     return {
+
       brand: {
         name: "TMDb",
         longName: "Turtle's Movie Database",
@@ -48,10 +50,20 @@ export default {
         description:
           "TMDb (Turtle's Movie Database) eli kilpikonnan elokuva tietokanta. Idea oman elokuva-aiheisen web-applikaation rakentamiseen syntyi yksinkertaisesta halusta lukea elokuvan juonesta tarkemmin ennen elokuvan katsomista, mutta kuitenkin niin ettei teksti paljasta juonesta liikaa. Jokaisesta tietokannan elokuvasta löytyy juoniseloste, jonka olen joko itse kirjoittanut tai olen muokannut alkuperäistä tekstiä.",
       },
-    };
+
+    }
+    const usersList = ref([])
+
+    onMounted(async () => {
+      const users = await getUsers()
+      usersList.value = users
+    })
   },
+
 };
 </script>
+
+
 
 <style>
 /* Archivo */
