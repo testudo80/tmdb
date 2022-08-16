@@ -8,8 +8,8 @@
       <TheHeader />
     </header>
     <div class="content-box">
-      <usersList />
       <main>
+        <usersList />
         <RouterView /><!-- <-SIVUJEN SISÄLTÖ (sisäänrakennettu komponentti)-->
       </main>
       <section>
