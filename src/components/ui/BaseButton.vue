@@ -6,7 +6,7 @@
 
 <style scoped>
 button {
-    border: 2px solid transparent;
+    border: none;
     font-size: 0.85em;
     background-color: #fff;
     padding: 15px 20px;
@@ -14,9 +14,10 @@ button {
     font-weight: 900;
     font-family: 'Archivo', sans-serif;
     cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 button:hover {
-    border-color: var(--border-main);
+    background-color: var(--gold);
 }
 </style>
