@@ -13,7 +13,7 @@
                 <h3>Mikä {{ name }}?</h3>
                 <p>{{ description }}</p>
                 <p>
-                    <router-link to="/about">
+                    <router-link to="/tmdb-app/about">
                         <base-button>Lisätietoa</base-button>
                     </router-link>
                 </p>

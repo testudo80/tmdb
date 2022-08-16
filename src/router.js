@@ -10,23 +10,23 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/', 
+            path: 'http://localhost:5173/', 
             component: MovieList 
         },
         {
-            path: '/movies/:movieId', 
+            path: 'http://localhost:5173/movies/:movieId', 
             component: MovieDetail
         },
         {
-            path: '/sci-fi', 
+            path: 'http://localhost:5173/sci-fi', 
             component: GenreScifi 
         },
         {
-            path: '/about', 
+            path: 'http://localhost:5173/tmdb-app/about', 
             component: AboutTMDb 
         },
         {
-            path: '/:notFound(.*)', component: NotFound
+            path: 'http://localhost:5173/:notFound(.*)', component: NotFound
         }
     ]
 })
