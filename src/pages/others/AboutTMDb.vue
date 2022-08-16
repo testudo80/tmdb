@@ -3,7 +3,7 @@
         
         <div class="grid-container">
             <div class="grid-item">
-                <h1>testi!</h1>
+           
                 <h2>Turtle's Movie Database</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore assumenda earum minima, officiis ad
                     quo numquam voluptatibus aperiam dolorem aliquam ullam? Maiores adipisci pariatur fugiat sunt, optio

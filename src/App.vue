@@ -1,22 +1,25 @@
 <template>
-  <div id="sidebar">
-    <TheSidebar :name="brand.name" :logo="brand.logo" />
-  </div>
-  <!--eslint-disable-next-line vue/no-multiple-template-root-->
-  <div id="right-side-wrapper">
-    <header>
-      <TheHeader />
-    </header>
-    <div class="content-box">
-      <main>
-        <usersList />
-        <RouterView /><!-- <-SIVUJEN SISÄLTÖ (sisäänrakennettu komponentti)-->
-      </main>
-      <section>
-        <p>tähän tekstiä - section</p>
-      </section>
-      <TheFooter :name="brand.name" :logo="brand.logo" :founded="brand.founded" :creator="brand.creator"
-        :description="brand.description" />
+  <div>
+    <div id="sidebar">
+      <TheSidebar :name="brand.name" :logo="brand.logo" />
+    </div>
+    <div id="right-side-wrapper">
+      <header>
+        <TheHeader />
+      </header>
+      <div class="content-box">
+        <main>
+
+
+          <RouterView /><!-- <-SIVUJEN SISÄLTÖ (sisäänrakennettu komponentti)-->
+        </main>
+        <section>
+          <p>tähän tekstiä - section</p>
+         
+        </section>
+        <TheFooter :name="brand.name" :logo="brand.logo" :founded="brand.founded" :creator="brand.creator"
+          :description="brand.description" />
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +33,10 @@ import TheFooter from "./components/layouts/TheFooter.vue"
 import logo from "./assets/brand/turtle-icon.png"
 
 export default {
+  
+  setup() { 
+    const usersList = ref([]) 
+  },
   components: {
     TheHeader,
     TheSidebar,
@@ -37,6 +44,7 @@ export default {
   },
   props: ["name", "long-name", "logo", "founded", "creator", "description"],
   data() {
+     
     return {
       brand: {
         name: "TMDb",
@@ -45,22 +53,20 @@ export default {
         founded: 2022,
         creator: "@kilpikonna",
         description: "TMDb (Turtle's Movie Database) eli kilpikonnan elokuva tietokanta. Idea oman elokuva-aiheisen web-applikaation rakentamiseen syntyi yksinkertaisesta halusta lukea elokuvan juonesta tarkemmin ennen elokuvan katsomista, mutta kuitenkin niin ettei teksti paljasta juonesta liikaa. Jokaisesta tietokannan elokuvasta löytyy juoniseloste, jonka olen joko itse kirjoittanut tai olen muokannut alkuperäistä tekstiä.",
-      },
+      }
     }
-
-    
-    const usersList = ref([])
-
+  },
+  mounted() {
     onMounted(async () => {
       const users = await getUsers()
       usersList.value = users
     })
-    
-  },
+
+  }
+  
 };
+
 </script>
-
-
 
 <style>
 /* Archivo */
