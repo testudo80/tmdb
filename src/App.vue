@@ -22,7 +22,7 @@
 
 <script>
 import { onMounted, ref } from 'vue'
-import { getUsers } from './services/users.ts'
+import { getUsers } from './services/users'
 import TheHeader from "./components/layouts/TheHeader.vue";
 import TheSidebar from "./components/layouts/TheSidebar.vue";
 import TheFooter from "./components/layouts/TheFooter.vue";
