@@ -10,7 +10,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: 'https://testudo80.github.io/tmdb-app/', 
+            path: '/tmdb-app/', 
             component: MovieList 
         },
         {
@@ -22,7 +22,7 @@ const router = createRouter({
             component: GenreScifi 
         },
         {
-            path: 'https://testudo80.github.io/tmdb-app//about', 
+            path: '/tmdb-app//about', 
             component: AboutTMDb 
         },
         {
