@@ -164,7 +164,7 @@ header {
   height: 80px;
   background-color: var(--bg-main);
   border-bottom: 2px solid var(--bg-main-alt);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
 
 .content-box {
