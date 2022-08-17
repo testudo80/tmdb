@@ -9,7 +9,7 @@ export default defineConfig({
   For base, see: https://vitejs.dev/config/#base and 
   https://vitejs.dev/guide/static-deploy.html#github-pages
   */
-  base: '/tmdp-app/',
+  base: '/tmdp/',
   plugins: [vue()],
   resolve: {
     alias: {

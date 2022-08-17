@@ -63,7 +63,7 @@
     </nav>-->
 <div id="sidebar">
     <nav>
-        <router-link to="/" id="title">
+        <router-link to="/tmdb/" id="title">
             <h1>{{ name }} <img :src="logo" alt="Logo"></h1>
         </router-link>
         <ul>
@@ -87,8 +87,8 @@ export default {
     data() {
         return {
             items: [
-                { id: 1, url: '/', icon: 'fas', iconName: 'fa-compact-disc', label: 'Elokuvat', amount: 340, empty: false },
-                { id: 2, url: '/sci-fi', icon: 'fas', iconName: 'fa-rocket', label: 'Sci-fi', amount: 40, empty: false },
+                { id: 1, url: '/tmdb/', icon: 'fas', iconName: 'fa-compact-disc', label: 'Elokuvat', amount: 340, empty: false },
+                { id: 2, url: '/tmdb/sci-fi', icon: 'fas', iconName: 'fa-rocket', label: 'Sci-fi', amount: 40, empty: false },
                 { id: 3, url: '/fantasia', icon: 'fas', iconName: 'fa-dragon', label: 'Fantasia', amount: 40, empty: false },
                 { id: 4, url: '/superhero', icon: 'fas', iconName: 'fa-mask', label: 'Superhero', amount: 40, empty: false },
                 { id: 5, url: '/toiminta', icon: 'fas', iconName: 'fa-burst', label: 'Toiminta', amount: 40, empty: false },
